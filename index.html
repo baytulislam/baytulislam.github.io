@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0A1628">
+  <meta name="description" content="Baytul Islam — aspiring Data and Business Analyst, BBA Business Analytics student at United International University.">
+  <title>Baytul Islam — Aspiring Data &amp; Business Analyst</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#0A1628;--blue:#1B4FD8;--blue-lt:#E8EFFD;--blue-md:#3D6FE8;--slate:#4A5568;--muted:#8896A6;--border:#E2E8F0;--border-light:#EDF2F7;--white:#fff;--off:#F8FAFC;--whatsapp:#25D366;--whatsapp-dark:#1EBE5A}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;scroll-padding-top:80px}
+    body{font-family:"DM Sans",sans-serif;color:var(--navy);background:#fff;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased}
+    img{max-width:100%;display:block} a{color:inherit;text-decoration:none;transition:color .2s ease,background .2s ease,transform .2s ease}
+    a:focus-visible,button:focus-visible{outline:3px solid #93B8F7;outline-offset:3px}
+    .container{width:min(1200px,100% - 3rem);margin-inline:auto}
+    nav{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+    .nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .nav-logo{font:400 22px "DM Serif Display",serif;letter-spacing:-.3px}
+    .nav-links{display:flex;align-items:center;gap:2rem}
+    .nav-links a{font-size:12px;font-weight:700;color:var(--slate);letter-spacing:.06em;text-transform:uppercase}
+    .nav-links a:hover{color:var(--blue)}
+    .nav-toggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer}
+    .nav-toggle span{display:block;width:23px;height:2px;background:var(--navy);margin:5px 0;border-radius:2px}
+    section{padding:6rem 0;scroll-margin-top:70px}
+    .section-label{font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin-bottom:.75rem}
+    .section-title{font:400 clamp(2rem,4vw,2.5rem)/1.2 "DM Serif Display",serif;margin-bottom:1.2rem}
+    .divider{width:50px;height:3px;background:var(--blue);border-radius:2px;margin-bottom:3rem}
+    #home{position:relative;overflow:hidden;background:var(--navy);color:#fff}
+    #home:before,#home:after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+    #home:before{width:500px;height:500px;top:-100px;right:-100px;background:rgba(27,79,216,.12)}
+    #home:after{width:350px;height:350px;bottom:-120px;left:5%;background:rgba(27,79,216,.06)}
+    .hero-inner{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:4rem;align-items:center}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(27,79,216,.2);border:1px solid rgba(61,111,232,.4);color:#93B8F7;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:1.5rem}
+    .dot{width:8px;height:8px;flex:0 0 auto;border-radius:50%;background:#4ADE80;animation:pulse 1.8s infinite}
+    @keyframes pulse{50%{box-shadow:0 0 0 5px rgba(74,222,128,.12)}}
+    .hero-name{font:400 clamp(2.8rem,5vw,4.5rem)/1.1 "DM Serif Display",serif;letter-spacing:-.5px;margin-bottom:.5rem}
+    .hero-title{font-size:1.25rem;color:rgba(147,184,247,.95);margin-bottom:1.5rem}
+    .hero-tagline{max-width:650px;color:rgba(255,255,255,.76);font-size:16px;line-height:1.8;margin-bottom:2rem}
+    .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+    .btn{display:inline-flex;justify-content:center;align-items:center;padding:13px 26px;border-radius:8px;font-size:13px;font-weight:700;letter-spacing:.03em}
+    .btn-primary{background:var(--blue);color:#fff;box-shadow:0 4px 14px rgba(27,79,216,.3)}
+    .btn-primary:hover{background:var(--blue-md);transform:translateY(-1px)}
+    .btn-outline{border:1px solid rgba(255,255,255,.3);color:#fff}
+    .btn-outline:hover{background:rgba(255,255,255,.07)}
+    .hero-divider{height:1px;background:rgba(255,255,255,.12);margin-bottom:2rem}
+    .hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem}
+    .hero-stat-num{font:400 2.25rem/1 "DM Serif Display",serif}
+    .hero-stat-label{font-size:11px;color:rgba(255,255,255,.55);margin-top:7px}
+    .hero-photo-wrap{display:flex;justify-content:center}
+    .hero-photo{width:100%;max-width:300px;aspect-ratio:1/1.15;object-fit:cover;object-position:center;border-radius:24px;border:4px solid rgba(61,111,232,.3);box-shadow:0 20px 40px rgba(0,0,0,.3);background:#15243b}
+    #about{background:#fff}
+    .about-grid{display:grid;gap:3rem}
+    .about-text{max-width:900px;color:var(--slate);font-size:16px;line-height:1.85}
+    .about-text p+p{margin-top:1rem}.highlight{color:var(--blue);font-weight:600}
+    .about-card{background:var(--off);border:1px solid var(--border-light);border-radius:20px;padding:2.25rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.4rem 3rem}
+    .about-info-col{display:flex;flex-direction:column;gap:5px;padding-bottom:12px;border-bottom:1px solid rgba(226,232,240,.8)}
+    .about-info-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+    .about-info-value{font-size:14px;color:var(--navy);font-weight:500;overflow-wrap:anywhere}
+    .about-card-status{grid-column:1/-1;padding-top:4px;color:#16A34A;font-weight:600;font-size:14px}
+    #skills{background:var(--off)}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:1.25rem}
+    .skill-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:1.6rem 1.4rem;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .skill-card:hover{box-shadow:0 12px 24px rgba(27,79,216,.06);transform:translateY(-3px);border-color:rgba(27,79,216,.25)}
+    .skill-icon{width:44px;height:44px;border-radius:12px;background:var(--blue-lt);display:grid;place-items:center;margin-bottom:1rem;font-size:21px}
+    .skill-name{font-size:15px;font-weight:700;margin-bottom:6px}
+    .skill-desc{font-size:12.5px;color:var(--slate);line-height:1.55;min-height:38px}
+    .skill-bar{height:5px;background:var(--border-light);border-radius:100px;margin-top:15px;overflow:hidden}
+    .skill-fill{height:100%;border-radius:100px;background:var(--blue)}
+    #projects{background:#fff}
+    .projects-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+    .project-card{background:var(--off);border:1px solid var(--border);border-radius:18px;padding:2rem;display:flex;flex-direction:column;min-width:0;transition:transform .25s,box-shadow .25s,border-color .25s}
+    .project-card:hover{border-color:rgba(27,79,216,.3);box-shadow:0 12px 30px rgba(27,79,216,.05);transform:translateY(-2px)}
+    .project-tag{align-self:flex-start;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--blue);background:var(--blue-lt);padding:5px 12px;border-radius:100px;margin-bottom:1rem}
+    .project-title{font:400 1.35rem/1.3 "DM Serif Display",serif;margin-bottom:.75rem}
+    .project-desc{font-size:14px;color:var(--slate);line-height:1.75;flex:1;margin-bottom:1.5rem}
+    .project-footer{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-top:1rem;border-top:1px solid var(--border)}
+    .project-tech{font-size:12px;color:var(--muted);font-weight:500}
+    .project-link{font-size:12px;font-weight:700;color:var(--blue)}
+    #contact{background:var(--navy);color:#fff}
+    #contact .section-label{color:#93B8F7}#contact .section-title{color:#fff}#contact .divider{background:#93B8F7}
+    .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:4rem}
+    .contact-intro{font-size:15px;color:rgba(255,255,255,.8);line-height:1.85;margin-bottom:2rem}
+    .contact-intro span{color:#93B8F7;font-weight:600}
+    .contact-details-list{margin-bottom:2rem}
+    .contact-detail{display:flex;align-items:center;gap:15px;margin-bottom:1.3rem}
+    .contact-icon{width:44px;height:44px;flex:0 0 auto;border-radius:12px;background:rgba(27,79,216,.25);border:1px solid rgba(61,111,232,.2);display:grid;place-items:center;font-size:18px}
+    .contact-detail-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.48)}
+    .contact-detail-value{font-size:14px;color:rgba(255,255,255,.9);overflow-wrap:anywhere}
+    .contact-detail-value a:hover{color:#93B8F7}
+    .open-to{display:inline-flex;align-items:center;gap:12px;background:rgba(61,111,232,.15);border:1px solid rgba(61,111,232,.3);color:#93B8F7;font-size:12px;font-weight:600;padding:10px 18px;border-radius:100px}
+    .whatsapp-wrap{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:2.5rem;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+    .whatsapp-icon-badge{width:54px;height:54px;border-radius:14px;background:rgba(37,211,102,.15);border:1px solid rgba(37,211,102,.3);display:grid;place-items:center;margin-bottom:1.25rem}
+    .whatsapp-icon-badge svg{width:28px;height:28px}
+    .whatsapp-heading{font:400 1.6rem/1.3 "DM Serif Display",serif;margin-bottom:.9rem}
+    .whatsapp-desc{font-size:14px;color:rgba(255,255,255,.72);line-height:1.8;margin-bottom:1.5rem;max-width:420px}
+    .whatsapp-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--whatsapp);color:#fff;font-size:14px;font-weight:700;padding:14px;border-radius:8px}
+    .whatsapp-btn:hover{background:var(--whatsapp-dark);transform:translateY(-1px)}
+    .whatsapp-btn svg{width:20px;height:20px;flex:0 0 auto}
+    .whatsapp-note{font-size:11px;color:rgba(255,255,255,.45);margin-top:1rem;text-align:center;width:100%}
+    footer{background:#060E1D;padding:2.5rem 0;text-align:center;border-top:1px solid rgba(255,255,255,.04)}
+    .copyright{font-size:13px;color:rgba(255,255,255,.45);margin-bottom:10px}
+    .footer-tagline{font-size:13px;color:rgba(255,255,255,.62);font-style:italic}
+    @media(max-width:992px){
+      section{padding:4.5rem 0}.hero-inner{grid-template-columns:1fr;gap:2.5rem;text-align:center}
+      .hero-photo-wrap{order:-1}.hero-photo{max-width:230px}.hero-tagline{margin-inline:auto}
+      .hero-btns{justify-content:center}.hero-stats{max-width:520px;margin-inline:auto}
+      .contact-grid{grid-template-columns:1fr;gap:2.5rem}
+      .whatsapp-wrap{align-items:center;text-align:center}.whatsapp-desc{max-width:100%}
+    }
+    @media(max-width:767px){
+      .container{width:min(100% - 2rem,1200px)}
+      .nav-toggle{display:block}
+      .nav-links{display:none;position:absolute;top:70px;left:0;right:0;background:#fff;border-bottom:1px solid var(--border);padding:1.25rem;box-shadow:0 10px 20px rgba(0,0,0,.05);flex-direction:column;gap:1.1rem;align-items:stretch}
+      .nav-links.open{display:flex}.nav-links a{text-align:center;padding:5px}
+      .about-card{grid-template-columns:1fr;padding:1.5rem;gap:1rem}
+      .about-card-status{grid-column:auto}
+      .projects-grid{grid-template-columns:1fr}
+      .hero-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+      .whatsapp-wrap{padding:2rem 1.25rem}
+      .project-card{padding:1.5rem}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner container">
+      <a class="nav-logo" href="#home" aria-label="Baytul Islam home">Baytul Islam</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Open navigation menu" aria-controls="navLinks" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-badge"><span class="dot" aria-hidden="true"></span> Open to Internship Opportunities</div>
+            <h1 class="hero-name">Baytul Islam</h1>
+            <p class="hero-title">Aspiring Data &amp; Business Analyst</p>
+            <p class="hero-tagline">Driven by a clear goal: to help organisations replace guesswork with data-driven decisions. I am developing my skills in collecting, cleaning, analysing, and presenting data to support better business decisions.</p>
+            <div class="hero-btns"><a href="#projects" class="btn btn-primary">View Portfolio</a><a href="#contact" class="btn btn-outline">Contact Me</a></div>
+            <div class="hero-divider"></div>
+            <div class="hero-stats">
+              <div><div class="hero-stat-num">3.57</div><div class="hero-stat-label">Current CGPA</div></div>
+              <div><div class="hero-stat-num">5+</div><div class="hero-stat-label">Analytics Tools</div></div>
+              <div><div class="hero-stat-num">2028</div><div class="hero-stat-label">Expected Graduation</div></div>
+              <div><div class="hero-stat-num">BBA</div><div class="hero-stat-label">Business Analytics</div></div>
+            </div>
+          </div>
+          <div class="hero-photo-wrap">
+            <img class="hero-photo" src="profile.jpg" alt="Portrait of Baytul Islam"
+              onerror="this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=19sOw9mmSq35y7QSZnjiweZtjPd4s8u-r';">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <div class="section-label">About Me</div><h2 class="section-title">Who I Am</h2><div class="divider"></div>
+            <div class="about-text">
+              <p>I am <span class="highlight">Baytul Islam</span>, an aspiring <span class="highlight">Data and Business Analyst</span> and a BBA student majoring in <span class="highlight">Business Analytics</span> at <span class="highlight">United International University</span>, currently maintaining a <span class="highlight">3.57 CGPA</span>.</p>
+              <p>My academic journey is driven by a clear goal: to help organisations replace guesswork with <span class="highlight">data-driven decisions</span>. I work with <span class="highlight">Excel, SQL, Power BI, Python(beginner), and Google Sheets</span> and continue developing my practical analytics skills through coursework and projects.</p>
+              <p>I am interested in <span class="highlight">internship opportunities in Data or Business Analytics</span> where I can apply my knowledge to real-world business problems and keep learning.</p>
+            </div>
+          </div>
+          <div class="about-card">
+            <div class="about-info-col"><div class="about-info-label">Degree</div><div class="about-info-value">BBA in Business Analytics</div></div>
+            <div class="about-info-col"><div class="about-info-label">University</div><div class="about-info-value">United International University</div></div>
+            <div class="about-info-col"><div class="about-info-label">CGPA</div><div class="about-info-value">3.57 / 4.00 (Ongoing)</div></div>
+            <div class="about-info-col"><div class="about-info-label">Credits</div><div class="about-info-value">83/125 (Ongoing)</div></div>
+            <div class="about-info-col"><div class="about-info-label">Period</div><div class="about-info-value">2024–2028 (Expected Graduation)</div></div>
+            <div class="about-info-col"><div class="about-info-label">Focus</div><div class="about-info-value">Data &amp; Business Analytics</div></div>
+            <div class="about-card-status">● Open to suitable internship opportunities</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="section-label">Technical Skills</div><h2 class="section-title">Tools I Work With</h2><div class="divider"></div>
+        <div class="skills-grid">
+          <article class="skill-card"><div class="skill-icon" aria-hidden="true">📊</div><h3 class="skill-name">Microsoft Excel</h3><p class="skill-desc">Data cleaning, formulas, PivotTables</p><div class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:70%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon" aria-hidden="true">🗄️</div><h3 class="skill-name">SQL / MySQL</h3><p class="skill-desc">Queries, filtering, joins, database analysis</p><div class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:45%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon" aria-hidden="true">📈</div><h3 class="skill-name">Power BI</h3><p class="skill-desc">Dashboard design and data visualisation</p><div class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:60%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon" aria-hidden="true">🐍</div><h3 class="skill-name">Python</h3><p class="skill-desc">Basic data analysis and programming</p><div class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:35%"></div></div></article>
+          <article class="skill-card"><div class="skill-icon" aria-hidden="true">📋</div><h3 class="skill-name">Google Sheets</h3><p class="skill-desc">Spreadsheet analysis and data management</p><div class="skill-bar" aria-hidden="true"><div class="skill-fill" style="width:70%"></div></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="section-label">Portfolio</div><h2 class="section-title">Featured Projects</h2><div class="divider"></div>
+        <div class="projects-grid">
+          <article class="project-card"><span class="project-tag">Power BI</span><h3 class="project-title">HR Analytics Dashboard</h3><p class="project-desc">A Power BI dashboard project exploring HR metrics and presenting workforce insights through interactive visualisations.</p><div class="project-footer"><span class="project-tech">Power BI · Visualisation</span><span class="project-link">Project details coming soon</span></div></article>
+          <article class="project-card"><span class="project-tag">Excel</span><h3 class="project-title">E-Commerce Data Cleaning</h3><p class="project-desc">A practice project concept focused on cleaning a sales dataset, standardising values, handling duplicates, and summarising results with spreadsheet tools.</p><div class="project-footer"><span class="project-tech">Excel · PivotTables</span><span class="project-link">Planned project</span></div></article>
+          <article class="project-card"><span class="project-tag">SQL</span><h3 class="project-title">Customer Analysis with SQL</h3><p class="project-desc">A project concept for practising SQL queries to explore customer orders, purchase patterns, and sales performance.</p><div class="project-footer"><span class="project-tech">SQL · JOINs</span><span class="project-link">Planned project</span></div></article>
+          <article class="project-card"><span class="project-tag">Python</span><h3 class="project-title">Exploratory Data Analysis</h3><p class="project-desc">A planned analysis using Python to inspect a public dataset, identify patterns, and communicate findings with charts.</p><div class="project-footer"><span class="project-tech">Python · Pandas</span><span class="project-link">Planned project</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-label">Get in Touch</div><h2 class="section-title">Let's Connect</h2><div class="divider"></div>
+        <div class="contact-grid">
+          <div>
+            <p class="contact-intro">I am a <span>Business Analytics student</span> interested in internship opportunities where I can help turn data into useful insights, dashboards, and reports.</p>
+            <div class="contact-details-list">
+              <div class="contact-detail"><div class="contact-icon" aria-hidden="true">✉️</div><div><div class="contact-detail-label">Email</div><div class="contact-detail-value"><a href="mailto:baytulislam20@gmail.com">baytulislam20@gmail.com</a></div></div></div>
+              <div class="contact-detail"><div class="contact-icon" aria-hidden="true">📞</div><div><div class="contact-detail-label">Phone</div><div class="contact-detail-value"><a href="tel:+8801762982997">+8801762982997</a></div></div></div>
+              <div class="contact-detail"><div class="contact-icon" aria-hidden="true">🔗</div><div><div class="contact-detail-label">LinkedIn</div><div class="contact-detail-value"><a href="https://www.linkedin.com/in/baytul-islam/" target="_blank" rel="noopener noreferrer">linkedin.com/in/baytul-islam</a></div></div></div>
+            </div>
+            <div class="open-to"><span class="dot" aria-hidden="true"></span> Open to Data / Business Analytics opportunities</div>
+          </div>
+          <div class="whatsapp-wrap">
+            <div class="whatsapp-icon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4C7.63 4 4.03 7.6 4.03 12.02c0 1.42.37 2.8 1.08 4.02L4 20l4.06-1.06a8 8 0 0 0 3.98 1.02h.01c4.42 0 8.02-3.6 8.02-8.02a7.98 7.98 0 0 0-2.47-5.62Zm-5.55 12.3h-.01a6.7 6.7 0 0 1-3.41-.93l-.24-.15-2.4.63.64-2.34-.16-.24a6.65 6.65 0 0 1-1.02-3.57 6.68 6.68 0 0 1 6.68-6.68 6.63 6.63 0 0 1 4.72 1.96 6.63 6.63 0 0 1 1.96 4.72c0 3.69-3 6.6-6.76 6.6Z" fill="#25D366"/></svg></div>
+            <h3 class="whatsapp-heading">Contact Me on WhatsApp</h3>
+            <p class="whatsapp-desc">Prefer a quicker chat? Message me directly on WhatsApp to discuss my work or potential internship opportunities.</p>
+            <a class="whatsapp-btn" href="https://wa.me/8801762982997?text=Hi%20Baytul%2C%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4C7.63 4 4.03 7.6 4.03 12.02c0 1.42.37 2.8 1.08 4.02L4 20l4.06-1.06a8 8 0 0 0 3.98 1.02h.01c4.42 0 8.02-3.6 8.02-8.02a7.98 7.98 0 0 0-2.47-5.62Z" fill="#fff"/></svg>
+              Chat on WhatsApp
+            </a>
+            <p class="whatsapp-note">Contact directly via WhatsApp</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="container"><p class="copyright">© <span id="year">2026</span> Baytul Islam. All rights reserved.</p><p class="footer-tagline">“Data is not just numbers — it is the language of informed decisions.”</p></div></footer>
+
+  <script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    function closeNav() {
+      navLinks.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Open navigation menu");
+    }
+    navToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+    });
+    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", closeNav));
+    document.addEventListener("keydown", event => { if (event.key === "Escape") closeNav(); });
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
